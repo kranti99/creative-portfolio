@@ -102,7 +102,7 @@ function NameLogo({ name }: { name: KeyTextField }) {
       aria-label="Home page"
       className="text-xl font-extrabold tracking-tighter text-slate-900"
     >
-      {name}
+      Kantiman
     </Link>
   );
 }
