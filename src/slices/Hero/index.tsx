@@ -55,18 +55,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     return () => ctx.revert(); // cleanup!
   }, []);
 
-  const renderLetters = (name: KeyTextField, key: string) => {
-    if (!name) return;
-    return name.split("").map((letter, index) => (
-      <span
-        key={index}
-        className={`name-animation name-animation-${key}-index inline-block opacity-0 `}
-      >
-        {letter}
-      </span>
-    ));
-  };
-
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -78,9 +66,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <div className="col-start-1 md:row-start-1 " data-speed=".2">
           <h1
             className="mb-8 text-[clamp(3rem,20vmin,20rem)] font-extrabold leading-none tracking-tighter"
-            aria-label={
-              slice.primary.first_name + " " + slice.primary.last_name
-            }
+           
           >
             <span className="block text-slate-300 ">
               <span class="name-animation name-animation-first inline-block opacity-0" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px); transform-origin: 0% 0%;">K</span>
